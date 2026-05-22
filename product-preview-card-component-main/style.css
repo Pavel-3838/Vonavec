@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body{
+    background-color: hsl(30, 38%, 92%);
+    font-family: 'Montserrat', sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* HLAVNÍ KARTA */
+body > div:first-child{
+
+    width: 600px;
+    height: 450px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    padding-left: 300px;
+}
+
+/* OBRÁZEK */
+body > div:first-child::before{
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 300px;
+    height: 450px;
+
+    background-image: url("./images/image-product-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* PERFUME */
+.parfem{
+
+    color: hsl(228, 12%, 48%);
+
+    text-transform: uppercase;
+
+    letter-spacing: 5px;
+
+    font-size: 12px;
+
+    margin-top: 32px;
+    margin-left: 32px;
+}
+
+/* NADPIS */
+.blabla{
+
+    font-family: 'Fraunces', serif;
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    color: hsl(212, 21%, 14%);
+
+    width: 220px;
+
+    margin-top: 22px;
+    margin-left: 32px;
+}
+
+/* POPIS */
+.floral{
+
+    color: hsl(228, 12%, 48%);
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    width: 237px;
+
+    margin-top: 24px;
+    margin-left: 32px;
+}
+
+/* NOVÁ CENA */
+.cena1{
+
+    font-family: 'Fraunces', serif;
+
+    font-size: 32px;
+
+    color: hsl(158, 36%, 37%);
+
+    margin-top: 28px;
+    margin-left: 32px;
+
+    display: inline-block;
+}
+
+/* STARÁ CENA */
+.cena2{
+
+    display: inline-block;
+
+    margin-left: 18px;
+
+    color: hsl(228, 12%, 48%);
+
+    text-decoration: line-through;
+
+    font-size: 13px;
+
+    position: relative;
+left: 155px;
+    top: -35px;
+}
+
+/* BUTTON */
+.karta{
+
+    width: 236px;
+
+    background-color: hsl(158, 36%, 37%);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 15px 0;
+
+    border-radius: 8px;
+
+    margin-top: 1px;
+    margin-left: 32px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+    background-image: url("./images/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position: 60px center;
+    
+}
+
+/* HOVER */
+.karta:hover{
+
+    background-color: hsl(158, 42%, 18%);
+}
+
+/* ATTRIBUTION */
+.attribution{
+
+    top: 20px;
+
+    font-size: 11px;
+
+    text-align: center;
+
+    color: black;
+}
+
+/* MOBIL */
+@media(max-width: 650px){
+
+    body > div:first-child{
+
+        width: 345px;
+        height: 610px;
+
+        padding-left: 0;
+        padding-top: 240px;
+    }
+
+    body > div:first-child::before{
+
+        width: 345px;
+        height: 240px;
+
+        background-image: url("./images/image-product-mobile.jpg");
+    }
+
+    .parfem{
+
+        margin-top: 24px;
+    }
+
+    .blabla{
+
+        width: 295px;
+
+        font-size: 32px;
+
+        margin-top: 14px;
+    }
+
+    .floral{
+
+        width: 295px;
+
+        margin-top: 18px;
+    }
+
+    .karta{
+
+        width: 280px;
+        margin-top: -10px;
+    }
+}
